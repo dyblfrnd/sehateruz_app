@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class DataKesehatan {
   String title;
@@ -84,16 +83,10 @@ List<String> gambarCarousel = [
   'images/3picture.jpg'
 ];
 
-
-class DataQuotes {
-  String quotes;
-  String chara;
-
-  DataQuotes(this.quotes, this.chara);
-
-
-  List<DataQuotes> createQuotesList() {
-    List _dataQuotes = List<DataQuotes>();
-     
-  }
-}
+List<String> quotes = [
+  "A fit body, a calm mind, a house full of love. These things cannot be bought they must be earned. \n - Naval Ravikant -",
+  "Health is the first muse, and sleep is the condition to produce it. \n – Ralph Waldo Emerson -",
+  "Take care of your body. It’s the only place you have to live.\n - Jim Rohn -",
+  "Keeping your body healthy is an expression of gratitude to the whole cosmos the trees, the clouds, everything.\n - Nhat Hanh -",
+  "It is health that is real wealth and not pieces of gold and silver\n - Mahatma Gandhi -",
+];
