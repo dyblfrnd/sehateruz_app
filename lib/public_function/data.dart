@@ -83,3 +83,17 @@ List<String> gambarCarousel = [
   'images/2picture.png',
   'images/3picture.jpg'
 ];
+
+
+class DataQuotes {
+  String quotes;
+  String chara;
+
+  DataQuotes(this.quotes, this.chara);
+
+
+  List<DataQuotes> createQuotesList() {
+    List _dataQuotes = List<DataQuotes>();
+     
+  }
+}
