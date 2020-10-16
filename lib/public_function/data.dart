@@ -1,4 +1,3 @@
-
 class DataKesehatan {
   String title;
   String subTitle;
@@ -90,3 +89,6 @@ List<String> quotes = [
   "Keeping your body healthy is an expression of gratitude to the whole cosmos the trees, the clouds, everything.\n - Nhat Hanh -",
   "It is health that is real wealth and not pieces of gold and silver\n - Mahatma Gandhi -",
 ];
+
+
+

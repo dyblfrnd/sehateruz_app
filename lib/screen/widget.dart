@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sehateruz_app/public_function/data.dart';
 import 'package:sehateruz_app/public_function/style.dart';
+import 'package:sehateruz_app/screen/detail.dart';
 
 // ignore: camel_case_types
 class topWidget extends StatelessWidget {
@@ -139,8 +140,10 @@ class _articlesHealthState extends State<articlesHealth> {
           shrinkWrap: true,
             itemCount: _dataKesehatan.length,
             itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
+            return GestureDetector(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.blue,
@@ -159,20 +162,36 @@ class _articlesHealthState extends State<articlesHealth> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ListTile(
-                     title:  Column(
-                       mainAxisAlignment: MainAxisAlignment.start,
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: <Widget>[
-                         Text(_dataKesehatan[index].title, overflow: TextOverflow.ellipsis, style: titleStyle),
-                         SizedBox(height: 10,),
-                         Text(_dataKesehatan[index].subTitle, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.white))
-                       ],
-                     ),
+                      title: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(_dataKesehatan[index].title,
+                              overflow: TextOverflow.ellipsis,
+                              style: titleStyle),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(_dataKesehatan[index].subTitle,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(color: Colors.white))
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              );
-            },
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => detailPage(
+                              itemTitle: _dataKesehatan[index].title,
+                              itemArticles: _dataKesehatan[index].subTitle,
+                            )));
+              },
+            );
+          },
         )
 
       ],
